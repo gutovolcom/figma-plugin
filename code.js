@@ -2,7 +2,7 @@ figma.showUI(__html__, { width: 300, height: 200 });
 
 figma.ui.onmessage = async (msg) => {
   if (msg.type === 'fetch-and-apply') {
-    const res = await fetch('https://SEU_BACKEND_HOST/api/kv-update');
+    const res = await fetch('figma-plugin-production.up.railway.app');
     const data = await res.json();
 
     const nodes = figma.currentPage.findAll(n =>
